@@ -4,11 +4,12 @@
 
 template<typename T>
 class SimpleVector {
-protected:
+private:
+    T* data;
     int currentSize;
     int currentCapacity;
 
-private:
+protected:
     void resize(int newCapacity);
 
 public:
@@ -23,7 +24,13 @@ public:
     int capacity();
     void sortData();
 
-    T* data;
+    T& operator[](int index) {
+        return data[index];
+    }
+    const T& operator[](int index) const {
+        return data[index];
+    }
+
 };
 
 template<typename T>

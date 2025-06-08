@@ -20,7 +20,7 @@ int main() {
 	cout << "size : " << intvec.size() << " capacity : " << intvec.capacity() << endl;
 	for (int i = 0; i < intvec.size(); i++)
 	{
-		cout << intvec.data[i] << " ";
+		cout << intvec[i] << " ";
 	}
 	cout << endl;
 
@@ -29,7 +29,7 @@ int main() {
 	intvec.sortData();
 	for (int i = 0; i < intvec.size(); i++)
 	{
-		cout << intvec.data[i] << " ";
+		cout << intvec[i] << " ";
 	}
 
 	return 0;
